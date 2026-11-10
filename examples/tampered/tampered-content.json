@@ -1,0 +1,168 @@
+{
+  "anchors": {
+    "openTimestamps": {
+      "covers": "credentialSubject.integrity.merkleRoot",
+      "proof": null,
+      "status": "unavailable"
+    }
+  },
+  "credential": {
+    "@context": [
+      "https://www.w3.org/ns/credentials/v2",
+      {
+        "@vocab": "https://lookupluke.com/ns/evidence#"
+      }
+    ],
+    "credentialSubject": {
+      "auditHead": {
+        "rowHash": "6f09d6983d183d4a83fb59db5f3f4a406be5f06daab071fd3919bd1d8753a23d",
+        "seq": 2776
+      },
+      "case": {
+        "app_version": "0.11.0-dev",
+        "authorization": null,
+        "case": {
+          "case_file": null,
+          "case_type": "fraud_triage",
+          "created_at": "2026-11-06T09:15:13+00:00",
+          "id": "fd9771cd-ef0a-4235-9b4a-b8cb47787455",
+          "playbook": "Fraud triage",
+          "status": "open",
+          "title": "paypa1-secure.com",
+          "updated_at": "2026-11-06T09:15:13+00:00"
+        },
+        "entities": [
+          {
+            "first_seen": "2026-11-06T09:15:13+00:00",
+            "kind": "domain",
+            "value": "paypa1-secure.com"
+          }
+        ],
+        "integrity": {
+          "algorithm": "sha256",
+          "hash": "77a3be804bcdccf1e6412b3c1b4f10e9e69f3f482b66796739b18b8dcdf4eb9b"
+        },
+        "limitations": {
+          "disclaimer": "This report was produced by Lookup Luke from public sources at the time shown. Findings can change, sources can be wrong, and a score is an indicator, not proof. Verify independently before acting, and use only for the stated, lawful purpose.",
+          "gaps": []
+        },
+        "links": [],
+        "methodology": {
+          "ruleset": null,
+          "runs": [],
+          "sources": [
+            {
+              "key": "dns",
+              "name": "DNS records",
+              "reliability": "A"
+            },
+            {
+              "key": "rdap",
+              "name": "RDAP registry data",
+              "reliability": "A"
+            }
+          ]
+        },
+        "report_version": "3",
+        "rounds": [],
+        "summary": null,
+        "verdict": null
+      },
+      "custody": [
+        {
+          "action": "triage",
+          "actor": "4a7654065ad5995e",
+          "at": "2026-11-06T09:15:13.059978+00:00",
+          "rowHash": "6f09d6983d183d4a83fb59db5f3f4a406be5f06daab071fd3919bd1d8753a23d",
+          "seq": 2776
+        }
+      ],
+      "id": "urn:uuid:fd9771cd-ef0a-4235-9b4a-b8cb47787455",
+      "integrity": {
+        "canonicalization": "RFC 8785 (JCS)",
+        "hash": "SHA-256",
+        "leafOrder": "observations by n, then the case",
+        "merkleRoot": "109f7deec5274a4aacf2f8fdc68c4bf210c8ce73a73b0815d4ff1f6f018bb34f",
+        "tree": "RFC 6962"
+      },
+      "observations": [
+        {
+          "credibility": 2,
+          "entity": {
+            "kind": "domain",
+            "value": "paypa1-secure.com"
+          },
+          "field": "registered",
+          "grade": "A2",
+          "n": 1,
+          "observation_id": "a0a188e9-7a71-4e29-8d66-e6bc5d1ed819",
+          "observed_at": "2026-11-06T09:15:13+00:00",
+          "raw": {
+            "status": 404
+          },
+          "source": {
+            "key": "rdap",
+            "name": "RDAP registry data",
+            "reliability": "A"
+          },
+          "value": {
+            "hosts": [
+              "mx.attacker.example"
+            ]
+          }
+        },
+        {
+          "credibility": 2,
+          "entity": {
+            "kind": "domain",
+            "value": "paypa1-secure.com"
+          },
+          "field": "mx",
+          "grade": "A2",
+          "n": 2,
+          "observation_id": "ac4ae76e-37ad-49aa-859b-b5f010815119",
+          "observed_at": "2026-11-06T09:15:13+00:00",
+          "raw": {
+            "answer": []
+          },
+          "source": {
+            "key": "dns",
+            "name": "DNS records",
+            "reliability": "A"
+          },
+          "value": {
+            "hosts": [],
+            "present": false
+          }
+        }
+      ],
+      "timestamp": {
+        "token": "MIIFYQYJKoZIhvcNAQcCoIIFUjCCBU4CAQMxDzANBglghkgBZQMEAgEFADBpBgsqhkiG9w0BCRABBKBaBFgwVgIBAQYDKgMEMDEwDQYJYIZIAWUDBAIBBQAEIBCffe7FJ0pKrPL4/caMS/IQyM5zpzsIFdT/H28Bi7NPAgEBGBYyMDI2MTEwNjA5MTUxMy44NDM1MjJaoIIDDTCCAwkwggHxoAMCAQICFDuSCvIAIhktX+aTOkCN5NMM7AWxMA0GCSqGSIb3DQEBCwUAMCgxJjAkBgNVBAMMHWxvb2t1cGx1a2UtdmVyaWZ5IGZpeHR1cmUgVFNBMB4XDTI2MTEwNTA5MTUxM1oXDTQ2MTEwMTA5MTUxM1owKDEmMCQGA1UEAwwdbG9va3VwbHVrZS12ZXJpZnkgZml4dHVyZSBUU0EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCxYy+TIbo7LLOuTOpl7tfubDZ5yhjyhBYaiqLPnUzQyCHFoNey/5boTqrAZ9qvdEDAghXX/qF/+UiRVae1za958jjVEm3BoqKtenLQxtiNbkp2bQRS20vc3lGsDdzNELwdB4vrOiOD0G2AHr/7egXJW2hKJ4Hjem+gZsLsj1MwxTcDBzTCp81Kt4umbA7uq92hNDBN6mYYCjaxjyVkqu7IlhopdO7aZzWCPP/hSR7yLKi5yR8gas8NV+KQuhFv9ab5vUXBdS3F4CX52lP15VoBqq8d7MOJlpR0OnVClPSBfNhd6sYiLXB8KfT1FEgnIKp5m5u14uQ5iA7uzPwOE6UvAgMBAAGjKzApMA8GA1UdEwEB/wQFMAMBAf8wFgYDVR0lAQH/BAwwCgYIKwYBBQUHAwgwDQYJKoZIhvcNAQELBQADggEBAIVa2TsdRn5bQR+LYshRH3FGXIwmIMAhAxoHDtlrfe3lqbUXljPcik67vHsjeAX+cRCISbhOIPDbOUV7vNQtfWgql4ZU9PAP7yIrnbuv+5oHHPHyrvNnW4wPn0eR0KjI31Jjqfb+iM7rOh2eJdE1FhCwBhe0xSCtamWTGPNZAka02l8PPr9qj7KbRoI/XJtS1yOHlD35jeQxoQLLsU3CERBkdr7TISlYmLnHprne04W3IcCSh9PCtZZAiRab4akxDkR2592JVkeYXo4/enF4MYc/chs5uJi4CxEqOpMtxMTR8YgC0HG7EMtyopp/xc4wpG2rOrNczA5a7hy/evWDPmExggG6MIIBtgIBATBAMCgxJjAkBgNVBAMMHWxvb2t1cGx1a2UtdmVyaWZ5IGZpeHR1cmUgVFNBAhQ7kgryACIZLV/mkzpAjeTTDOwFsTANBglghkgBZQMEAgEFAKBNMBoGCSqGSIb3DQEJAzENBgsqhkiG9w0BCRABBDAvBgkqhkiG9w0BCQQxIgQgxY4oEF0iBSLXXsXpEX98lXF5SjUf3QaR3H45A6jXSDYwDQYJKoZIhvcNAQEBBQAEggEAWknQoBARNafynlsdFCrLYPtX7OQIc/ECAd6a+wct2BhEanVpns6QAL7PBvmocP1GqIY4qyEKQLn/EA4xVNp8ixJe/pXNcm++QUK54gfDLuqm/4P8R4MjWjNn1vP3OdnVNc4iGLu+iDOFIIp6dl0PmsV5cqJlkSPKZ3rS7HxYcGaSUTWEYQ1f37aOcncpe4pXKhjBJvTFHS/xCKsHHnaVRcQHrtZE8Xl7Z/9dqguXP7xg+e3UaNC1GHERPa0WJhMba0SrU1QL49ZQNjvOq4RILKhKTV/f9jPJyHoGRsjhzEHN1R/f6lTKAlvkkrnGEfUO9ti69uNjehtqjKE4vjANHw==",
+        "tsa": "https://tsa.test",
+        "type": "RFC3161"
+      },
+      "type": "OsintInvestigation"
+    },
+    "id": "urn:uuid:30a546f6-2ad2-44ac-b269-1df9d921e187",
+    "issuer": "did:web:fixtures.lookupluke.test",
+    "name": "OSINT evidence bundle: paypa1-secure.com",
+    "proof": {
+      "created": "2026-11-06T09:15:13Z",
+      "cryptosuite": "eddsa-jcs-2022",
+      "proofPurpose": "assertionMethod",
+      "proofValue": "z4ojswb3oB9kyocW11rLgjzDmmFjK3cezgEXhjoCYBJYg9BTSc62WpssGEL7q95DbsFcdauaHJ331q2YfdqhD385D",
+      "type": "DataIntegrityProof",
+      "verificationMethod": "did:web:fixtures.lookupluke.test#key-1"
+    },
+    "type": [
+      "VerifiableCredential",
+      "OsintEvidenceBundle"
+    ],
+    "validFrom": "2026-11-06T09:15:13Z"
+  },
+  "verify": {
+    "didDocument": "https://fixtures.lookupluke.test/.well-known/did.json",
+    "endpoint": "https://fixtures.lookupluke.test/api/v1/evidence/verify",
+    "offline": "pipx install lookupluke-verify && lookupluke-verify bundle.json"
+  }
+}

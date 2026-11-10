@@ -1,0 +1,18 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/multikey/v1"
+  ],
+  "assertionMethod": [
+    "did:web:fixtures.lookupluke.test#key-1"
+  ],
+  "id": "did:web:fixtures.lookupluke.test",
+  "verificationMethod": [
+    {
+      "controller": "did:web:fixtures.lookupluke.test",
+      "id": "did:web:fixtures.lookupluke.test#key-1",
+      "publicKeyMultibase": "z6MkpzszSzgC7wC3uuysX8JoUGqDZz1ZvdLBdPnJKnsv8NmB",
+      "type": "Multikey"
+    }
+  ]
+}
